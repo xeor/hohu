@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv sh
+
+[[ "${RUNMODE}" == "api" ]] || ( /usr/bin/s6-stopdisable api-websocket-worker && exit 0 )
+
+cd /data/src
+exec s6-setuidgid django /data/src/manage.py runworker --only-channels=websocket.*

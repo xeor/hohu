@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv sh
+
+[[ "${RUNMODE}" == "api" ]] || ( /usr/bin/s6-stopdisable api-http-django && exit 0 )
+
+cd /data/src
+exec s6-setuidgid django /usr/bin/uwsgi --http :5000 --buffer-size=32768 --workers=5 --master --need-app --module server_apps:http;

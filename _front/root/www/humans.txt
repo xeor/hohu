@@ -1,0 +1,14 @@
+/* TEAM */
+
+Developer: Lars Solberg
+Site: https://github.com/xeor
+Contact: lars.solberg [at] gmail.com
+Twitter: @xeor
+From: Oslo, Norway
+
+
+/* SITE */
+
+Standards: HTML5, CSS3
+Components:
+Software: git, nginx, docker, redis, postgresql

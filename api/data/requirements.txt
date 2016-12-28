@@ -1,0 +1,28 @@
+requests
+ipython
+
+Django
+
+channels
+asgi_redis
+
+Werkzeug
+django-debug-toolbar
+django-extensions
+django-redis-cache
+
+djangorestframework
+djangorestframework-hstore
+
+celery
+billiard
+kombu
+amqp
+
+redis
+hiredis
+psycopg2
+
+# The uwsgi package in alpine misses some modules, example http..
+# We also need the alpine packages; libuuid libxml2
+uwsgi

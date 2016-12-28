@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv sh
+
+echo -n "  "
+while ! $(psql -h db -p 5432 -U api -q -l &> /dev/null && true); do echo -n "."; sleep 0.5; done
+echo " reachable"
