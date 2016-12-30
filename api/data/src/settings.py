@@ -69,9 +69,9 @@ WSGI_APPLICATION = 'hohu.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'api',
-        'USER': 'api',
-        'PASSWORD': 'api',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': '',
         'HOST': 'db',
         'PORT': 5432
     }
@@ -108,3 +108,25 @@ USE_TZ = True
 
 STATIC_ROOT = BASE_DIR + '/../_static'
 STATIC_URL = '/_/api/_static/'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'asgi_redis.RedisChannelLayer',
+        'CONFIG': {
+            'hosts': ['redis://cache:6379/2'],
+        },
+        'ROUTING': 'routing.channel_routing',
+    },
+}
+
+CACHES = {
+    'default': {
+        'BACKEND': 'redis_cache.cache.RedisCache',
+        'LOCATION': 'cache:6379',
+        'OPTIONS': {
+            'DB': 1,
+            'PARSER_CLASS': 'redis.connection.HiredisParser',
+            'CLIENT_CLASS': 'redis_cache.client.DefaultClient',
+        }
+    }
+}

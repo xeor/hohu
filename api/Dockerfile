@@ -7,7 +7,7 @@ COPY ./data/requirements.txt /data/requirements.txt
 RUN set -ex \
     && adduser -D -H django \
     && apk update \
-    && apk add nginx python3 libuuid libxml2 libpq \
+    && apk add nginx python3 libuuid libxml2 libpq postgresql-client \
     && apk add --no-cache --virtual .build-deps \
         postgresql-dev gcc python3-dev musl-dev linux-headers \
     && pip3 install -r /data/requirements.txt \

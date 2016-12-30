@@ -12,6 +12,8 @@ services:
     build: "api"
     environment:
       RUNMODE: "api"
+      DEBUG: ${DEBUG}
+      DEV: ${DEV}
     volumes:
       - "./api/data/src:/data/src"
 
