@@ -63,9 +63,6 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'hohu.wsgi.application'
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
