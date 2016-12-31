@@ -11,9 +11,10 @@ services:
     restart: always
     build: "api"
     environment:
-      RUNMODE: "api"
-      DEBUG: ${DEBUG}
-      DEV: ${DEV}
+      - RUNMODE=api
+      - DEBUG
+      - DEV
+      - HTTP_PORT
     volumes:
       - "./api/data/src:/data/src"
 
@@ -21,7 +22,7 @@ services:
     restart: always
     build: "api"
     environment:
-      RUNMODE: "worker"
+      - RUNMODE=worker
     volumes:
       - "./api/data/src:/data/src"
 
