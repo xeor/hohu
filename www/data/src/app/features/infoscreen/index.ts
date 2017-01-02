@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { routes } from './sync.routing';
+import { routes } from './infoscreen.routing';
 
-import { SyncComponent } from './sync.component';
+import { InfoscreenComponent } from './infoscreen.component';
+
 
 @NgModule({
   imports: [
@@ -11,9 +12,8 @@ import { SyncComponent } from './sync.component';
     RouterModule.forChild(routes)
   ],
   declarations: [
-    SyncComponent
+    InfoscreenComponent
   ]
 })
 
-export class SyncModule {}
-
+export class InfoscreenModule {}

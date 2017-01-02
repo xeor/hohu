@@ -1,11 +1,6 @@
-/**
- * @authors: @qdouble and @AngularClass
- */
-
 const path = require('path');
 const fs = require('fs');
 
-// Helper functions
 const _root = path.resolve(__dirname);
 
 function checkNodeImport(context, request, cb) {

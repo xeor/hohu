@@ -5,18 +5,8 @@ export const views: Object[] = [
     link: ['']
   },
   {
-    name: 'Lazy',
-    icon: 'file_download',
-    link: ['lazy']
-  },
-    {
-    name: 'Sync',
-    icon: 'done',
-    link: ['sync']
-  },
-  {
-    name: 'Bad Link',
-    icon: 'error',
-    link: ['wronglink']
+    name: 'Infoscreen',
+    icon: 'sim_card_alert',
+    link: ['infoscreen']
   }
 ];

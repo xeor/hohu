@@ -30,7 +30,7 @@ app.engine('.html', createEngine({}));
 app.set('views', __dirname);
 app.set('view engine', 'html');
 app.use(compression());
-app.use(cookieParser('Angular 2 Universal'));
+app.use(cookieParser());
 app.use(bodyParser.json());
 
 // Serve static files
